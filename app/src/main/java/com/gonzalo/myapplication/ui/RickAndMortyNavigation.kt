@@ -13,19 +13,17 @@ sealed class Screen(val route: String) {
 }
 
 class RickAndMortyActions(navController: NavController) {
-    val navigateHome: () -> Unit = {
+    val navigateToHome: () -> Unit = {
         navController.navigate(Screen.Home.route) {
             popUpTo(navController.graph.findStartDestination().id) {
                 saveState = true
             }
             launchSingleTop = true
             restoreState = true
-
         }
     }
 
-
-    val navigateDetails = { id: Int ->
+    val navigateToDetail = { id: Int ->
         navController.navigate(Screen.Detail.passId(id)) {
             popUpTo(navController.graph.findStartDestination().id) {
                 saveState = true

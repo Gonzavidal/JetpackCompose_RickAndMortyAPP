@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">MyApplication</string>
+
+    <!--  HomeScreen  -->
+    <string name="home_title">Personajes</string>
+    <string name="previous_button">Atrás</string>
+    <string name="next_button">Siguiente</string>
+
+    <!-- DetailScreen   -->
+    <string name="first_location">Visto por primera vez en:</string>
+    <string name="last_location">Visto por última vez en:</string>
+    <string name="specie">Especie:</string>
+    <string name="status">Estado:</string>
+    <string name="gender">Género:</string>
 </resources>

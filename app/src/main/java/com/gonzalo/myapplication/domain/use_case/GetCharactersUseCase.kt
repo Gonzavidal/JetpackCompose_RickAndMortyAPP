@@ -6,7 +6,7 @@ import com.gonzalo.myapplication.domain.repositories.CharacterRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetCharactersUseCase @Inject constructor(
+class GetCharactersUseCase @Inject constructor  (
     private val repository: CharacterRepository
 ) {
     operator fun invoke(page: Int): Flow<Result<List<Characters>>> {

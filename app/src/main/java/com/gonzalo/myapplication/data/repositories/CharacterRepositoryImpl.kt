@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 class CharacterRepositoryImpl @Inject constructor(
     private val api: RickAndMortyApi
-) : CharacterRepository {
+): CharacterRepository {
 
     override fun getCharacters(page: Int): Flow<Result<List<Characters>>> = flow{
         emit(Result.Loading())

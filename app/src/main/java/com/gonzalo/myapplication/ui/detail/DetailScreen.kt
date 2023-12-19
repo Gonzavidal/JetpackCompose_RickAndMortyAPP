@@ -20,8 +20,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.gonzalo.myapplication.domain.model.Character
+import com.gonzalo.myapplication.ui.detail.components.CharacterImage
 import com.gonzalo.myapplication.ui.detail.components.DetailProperty
 import com.gonzalo.myapplication.ui.detail.components.mirroringBackIcon
+import com.gonzalo.myapplication.ui.theme.Magenta
+import com.gonzalo.myapplication.R
 
 @Composable
 fun DetailScreen(
@@ -61,17 +64,16 @@ private fun Header(
     character: Character?
 ) {
     Column(
-        modifier = modifier.background(Color(0xffffe0b2)),
+        modifier = modifier.background(Color.White),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        com.gonzalo.myapplication.ui.detail.components.CharacterImage(image = character?.image)
-        //CharacterImage(Image = character?.image)
+        CharacterImage(image = character?.image)
         Spacer(modifier = Modifier.height(12.dp))
         Text(
             text = character?.name ?: "",
             style = MaterialTheme.typography.h5,
-            color = Color.White
+            color = Color.Gray
         )
     }
 }
@@ -83,11 +85,11 @@ private fun Body(character: Character?) {
             .fillMaxSize()
             .background(Color.White)
     ) {
-        DetailProperty(label = stringResource(com.gonzalo.myapplication.R.string.specie), value = character?.specie, imageVector = Icons.Filled.EmojiPeople)
-        DetailProperty(label = stringResource(com.gonzalo.myapplication.R.string.status), value = character?.status, imageVector = Icons.Outlined.Help)
-        DetailProperty(label = stringResource(com.gonzalo.myapplication.R.string.gender), value = character?.gender, imageVector = Icons.Outlined.SafetyDivider)
-        DetailProperty(label = stringResource(com.gonzalo.myapplication.R.string.first_location), value = character?.origin?.name, imageVector = Icons.Outlined.Visibility)
-        DetailProperty(label = stringResource(com.gonzalo.myapplication.R.string.last_location), value = character?.location?.name, imageVector = Icons.Outlined.LocationOn)
+        DetailProperty(label = stringResource(R.string.specie), value = character?.specie, imageVector = Icons.Filled.EmojiPeople)
+        DetailProperty(label = stringResource(R.string.status), value = character?.status, imageVector = Icons.Outlined.Help)
+        DetailProperty(label = stringResource(R.string.gender), value = character?.gender, imageVector = Icons.Outlined.SafetyDivider)
+        DetailProperty(label = stringResource(R.string.first_location), value = character?.origin?.name, imageVector = Icons.Outlined.Visibility)
+        DetailProperty(label = stringResource(R.string.last_location), value = character?.location?.name, imageVector = Icons.Outlined.LocationOn)
     }
 }
 
@@ -101,7 +103,7 @@ private fun Up(upPress: () -> Unit) {
     ) {
         Icon(
             imageVector = mirroringBackIcon(),
-            tint = Color(0xffffffff),
+            tint = Magenta,
             contentDescription = null
         )
     }

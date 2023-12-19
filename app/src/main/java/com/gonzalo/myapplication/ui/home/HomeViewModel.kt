@@ -8,7 +8,6 @@ import androidx.lifecycle.viewModelScope
 import com.gonzalo.myapplication.data.Result
 import com.gonzalo.myapplication.domain.use_case.GetCharactersUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-//import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.launchIn

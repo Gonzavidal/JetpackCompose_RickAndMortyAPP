@@ -19,10 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.gonzalo.myapplication.R
 import com.gonzalo.myapplication.domain.model.Character
-import androidx.lifecycle.ViewModel
-import com.gonzalo.myapplication.ui.home.components.CharacterImage
 import com.gonzalo.myapplication.ui.detail.components.DetailProperty
 import com.gonzalo.myapplication.ui.detail.components.mirroringBackIcon
 

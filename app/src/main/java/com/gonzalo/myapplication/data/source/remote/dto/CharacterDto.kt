@@ -18,7 +18,7 @@ data class CharacterDto(
 )
 
 fun CharacterDto.toCharacter(): Character {
-    return com.gonzalo.myapplication.domain.model.Character(
+    return Character(
         id = id,
         name = name,
         status = status,

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyApplication</string>
+    <string name="app_name">Rick And Morty</string>
 
     <!--  HomeScreen  -->
     <string name="home_title">Personajes</string>
